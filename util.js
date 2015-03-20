@@ -8,25 +8,48 @@
 (function(global) {
   var Util = {
     version: "0.0.1",
+
     author: "@Pinjasaur",
+
+    /**
+    * Encodes/decodes a string based on the rot13 cipher.
+    *
+    * Acquired from http://phpjs.org/functions/str_rot13/.
+    */
     rot13: function(str) {
       return (str + "").replace(/[a-z]/gi, function(s) {
           return String.fromCharCode(s.charCodeAt(0) + (s.toLowerCase() < "n" ? 13 : -13));
         });
     },
+
+    /**
+    * Removes all whitepsace from a string.
+    */
     squish: function(str) {
       return str.replace(/\s+/g, "");
     },
+
+    /**
+    * "Engrishifies" a string by trimming and truncating excess whitespace.
+    */
     engrishify: function(str) {
       return str.trim().replace(/\s+/g, " ");
     },
 
     /**
+    * Returns a random hexadecimal color value.
+    *
+    * Optional parameter of "#" if an octothorpe needs to be appended to the hex output.
+    *
     * Acquired from http://www.paulirish.com/2009/random-hex-color-code-snippets/.
     */
-    randHex: function() {
-      return "#" + Math.floor(Math.random()*16777216).toString(16);
+    randHexColor: function(hash) {
+      return (hash && hash === "#") ? "#" : "" + Math.floor(Math.random()*16777216).toString(16);
     },
+
+    /**
+    * Returns a random integer between a given min and max value.
+    */
     randInt: function(min, max) {
       if (min && typeof min === "number" && max && typeof max === "number") {
         return Math.floor(Math.random()*(max - min + 1) + min);
