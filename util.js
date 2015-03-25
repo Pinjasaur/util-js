@@ -61,7 +61,7 @@
     /**
     * Returns the factorial of a specified number (-1 if the number is less than 0).
     */
-    factorial: function(num) {
+    fact: function(num) {
       if (num < 0) return -1;
       if (num == 0) return 1;
       return num*factorial(num-1);
@@ -79,7 +79,7 @@
     /**
     * Find and replace all instances of a pattern in a string.
     */
-    replaceAll: function(str, find, rep) {
+    repAll: function(str, find, rep) {
       return str.replace(new RegExp(escRegEx(find), "g"), rep);
     }
   }
