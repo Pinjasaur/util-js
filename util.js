@@ -65,6 +65,22 @@
       if (num < 0) return -1;
       if (num == 0) return 1;
       return num*factorial(num-1);
+    },
+
+    /**
+    * Escapes RegEx special (meta) characters.
+    *
+    * Acquired from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters.
+    */
+    escRegEx: function(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    },
+
+    /**
+    *
+    */
+    replaceAll: function(str, find, rep) {
+      return str.replace(new RegExp(escRegEx(find), "g"), rep);
     }
   }
 
