@@ -56,6 +56,15 @@
       } else {
         throw new Error("Missing parameter(s) or parameter(s) are of wrong data type.")
       }
+    },
+
+    /**
+    * Returns the factorial of a specified number (-1 if the number is less than 0).
+    */
+    factorial: function(num) {
+      if (num < 0) return -1;
+      if (num == 0) return 1;
+      return num*factorial(num-1);
     }
   }
 
