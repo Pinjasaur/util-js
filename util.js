@@ -77,7 +77,7 @@
     },
 
     /**
-    *
+    * Find and replace all instances of a pattern in a string.
     */
     replaceAll: function(str, find, rep) {
       return str.replace(new RegExp(escRegEx(find), "g"), rep);
