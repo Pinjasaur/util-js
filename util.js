@@ -54,7 +54,7 @@
       if (min && typeof min === "number" && max && typeof max === "number") {
         return Math.floor(Math.random()*(max - min + 1) + min);
       } else {
-        throw new Error("Missing parameter(s) or parameter(s) are of wrong data type.")
+        throw new Error("Missing parameter(s) or parameter(s) are of wrong data type.");
       }
     },
 
@@ -63,7 +63,7 @@
     */
     fact: function(num) {
       if (num < 0) return -1;
-      if (num == 0) return 1;
+      if (num === 0) return 1;
       return num*factorial(num-1);
     },
 
@@ -82,7 +82,7 @@
     repAll: function(str, find, rep) {
       return str.replace(new RegExp(escRegEx(find), "g"), rep);
     }
-  }
+  };
 
   if (global.Util) {
     throw new Error("Util has already been defined.");
