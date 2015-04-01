@@ -64,7 +64,7 @@
     fact: function(num) {
       if (num < 0) return -1;
       if (num === 0) return 1;
-      return num*fact(num-1);
+      return num*Util.fact(num-1);
     },
 
     /**
@@ -80,7 +80,7 @@
     * Find and replace all instances of a pattern in a string.
     */
     repAll: function(str, find, rep) {
-      return str.replace(new RegExp(escRegEx(find), "g"), rep);
+      return str.replace(new RegExp(Util.escRegEx(find), "g"), rep);
     }
   };
 
