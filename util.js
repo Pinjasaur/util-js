@@ -44,7 +44,7 @@
     * Acquired from http://www.paulirish.com/2009/random-hex-color-code-snippets/.
     */
     randHexColor: function(hash) {
-      return (hash && hash == "#") ? "#" : "" + Math.floor(Math.random()*16777216).toString(16);
+      return ((hash && hash === "#") ? "#" : "") + Math.floor(Math.random()*16777216).toString(16);
     },
 
     /**
