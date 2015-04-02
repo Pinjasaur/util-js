@@ -7,7 +7,7 @@
 */
 (function(global) {
   var Util = {
-    version: "0.0.1",
+    version: "0.0.2",
 
     author: "@Pinjasaur",
 
@@ -82,6 +82,8 @@
     repAll: function(str, find, rep) {
       return str.replace(new RegExp(Util.escRegEx(find), "g"), rep);
     }
+
+    //TODO: Add an inverter function
   };
 
   if (global.Util) {
