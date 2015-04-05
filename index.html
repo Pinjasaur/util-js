@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>util.js &mdash; a js utility library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+
+  <style>
+  .cf:before, .cf:after {
+    content: "";
+    display: table;
+  }
+
+  .cf:after {
+    clear:both;
+  }
+
+  *, *:before, *:after {
+    font-family: Lato, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #EEE;
+    margin: 0;
+  }
+
+  .page-wrap {
+
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #FFF;
+    box-shadow: 0 0 50px -10px #333;
+    border-radius: 0 0 10px 10px;
+  }
+
+  header {
+    border-bottom: 1px solid #BBB;
+    padding: 20px 0 0 30px;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  .header-text {
+    float: left;
+  }
+
+  .header-links {
+    float: right;
+    margin-top: 7px;
+  }
+
+  .btn {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #000;
+  }
+
+  .btn.header:hover {
+    opacity: 1;
+  }
+
+  .btn.header:hover:before {
+    left: 5px;
+  }
+
+  .btn.header:before {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
+    pointer-events: none;
+    content: "";
+    display: inline-block;
+    height: 0px;
+    width: 0px;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #000;
+    border-style: solid;
+    transition: inherit;
+   }
+
+   .btn.header.rotate-90:before {
+    transform: rotate(90deg);
+   }
+
+  .btn.header {
+    box-sizing: content-box;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 2.5em;
+    margin-right: 45px;
+    padding: 10px 30px 10px 30px;
+    opacity: .5;
+    height: 40px;
+    line-height: 40px;
+    transition: all .3s ease 0s;
+  }
+
+   h2 {
+    padding-left: 25px;
+   }
+
+  code, code > * {
+    white-space: pre-wrap;
+    font-family: Consolas, Monaco, monospace;
+    background: #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+  }
+
+  .util-docs {
+    padding-left: 20px;
+  }
+
+  .util-docs > li {
+    margin-right: 20px;
+    padding: 5px 10px 10px 5px;
+    list-style: none;
+  }
+
+  .util-docs > li:nth-child(2n-1) {
+    background-color: #eee;
+  }
+
+  .util-docs > li + li {
+    margin-top: 25px;
+  }
+
+  .util-docs > li > ul > * {
+    margin-top: 3px;
+  }
+
+  .util-docs > li:last-child {
+    padding-bottom: 25px;
+  }
+
+  .util-docs > li > code:first-child {
+    font-weight: bold;
+  }
+
+  .util-docs li >  ul > li:before {
+    content: "example \2192\a0";
+    font-style: italic;
+  }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="wrapper">
+      <header class="cf">
+        <div class="header-text">
+          <a href="http://github.com/pinjasaur/util-js"><h1>util.js</h1></a>
+          <h5>a js utility library by <a href="http://twitter.com/pinjasaur">@Pinjasaur</a>.</h5>
+        </div>
+        <div class="header-links">
+          <a href="http://github.com/pinjasaur/util-js" class="btn header">GitHub</a>
+          <a href="https://github.com/pinjasaur/util-js/archive/master.zip" class="btn header download">Download</a>
+        </div>
+      </header>
+
+      <h2>util.js &ndash; docs</h2>
+      <ul class="util-docs">
+        <li><code>Util.version</code> returns the version of the library
+          <ul>
+            <li><code>Util.version // <span data-util-func="Util.version"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.author</code> returns the author of the library
+          <ul>
+            <li><code>Util.author // <span data-util-func="Util.author"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.rot13(str)</code> encodes/decodes <code>str</code> based on the rot13 cipher
+          <ul>
+            <li><code>Util.rot13("Hello world") // <span data-util-func="Util.rot13('Hello world')"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.squish(str)</code> removes all whitespace from <code>str</code>
+          <ul>
+            <li><code>Util.squish("   Hell  o   worl   d    ") // <span data-util-func="Util.squish('   Hell  o   worl   d    ')"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.engrishify(str)</code> trims and truncates all whitespace from <code>str</code>
+          <ul>
+            <li><code>Util.engrishify("   Hello     world    ") // <span data-util-func="Util.engrishify('   Hello     world    ')"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.randHexColor()</code> returns a random hexadecimal color, with an optional hex appended to it
+          <ul>
+            <li><code>Util.randHexColor() // <span data-util-func="Util.randHexColor()"></span></code></li>
+            <li><code>Util.randHexColor("#") // <span data-util-func="Util.randHexColor('#')"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.randInt(min, max)</code> returns an integer between <code>min</code> and <code>max</code>
+          <ul>
+            <li><code>Util.randInt(-100, 100) // <span data-util-func="Util.randInt(-100, 100)"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.fact(n)</code> returns the factorial of <code>n</code> (-1 if <code>n</code> is &lt; 0)
+          <ul>
+            <li><code>Util.fact(7) // <span data-util-func="Util.fact(7)"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.escRegEx(regex)</code> escapes the meta (special) characters from the regular expression <code>regex</code>
+          <ul>
+            <li><code>Util.escRegEx("[^$.*/\\]") // <span data-util-func="Util.escRegEx('[^$.*/\\]')"></span></code></li>
+          </ul>
+        </li>
+
+        <li><code>Util.repAll(str, find, rep)</code> finds and replaces all instances of <code>find</code> in <code>str</code> with <code>rep</code>
+          <ul>
+            <li><code>Util.repAll("Will Smith will smith while smithing his will", "will", "code") // <span data-util-func="Util.repAll('Will Smith will smith while smithing his will', 'will', 'code')"></span></code></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://rawgit.com/pinjasaur/util-js/master/util.min.js"></script>
+  <script>
+
+  $(function() {
+    $("[data-util-func]").each(function() {
+      $(this).text(eval($(this).data("util-func")));
+    });
+
+    /*$(".download").on("click", function() {
+      $(this).toggleClass("rotate-90");
+
+      $(this).on("mouseleave", function() {
+        $(this).removeClass("rotate-90");
+      });
+    });*/
+  })
+
+  </script>
+</body>
+</html>
