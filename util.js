@@ -86,10 +86,11 @@
     /**
     * "Mask" a string by replacing all but the last 4 (changeable via optional param) characters with a "#".
     */
-    maskify: function(str, val) {
-      var offset = val ? val : 4;
-      if (str.length <= offset) return str;
-      return Array(str.length-offset+1).join("#") + str.substring(str.length-offset, str.length);
+    maskify: function(str, mask, offset) {
+      var maskChar  = mask ? mask : "#";
+      var offsetVal = offset ? offset : 4;
+      if (str.length <= offsetVal) return str;
+      return Array(str.length-offsetVal+1).join(maskChar) + str.substring(str.length-offsetVal, str.length);
     }
 
     //TODO: Add an inverter function
