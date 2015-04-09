@@ -170,71 +170,64 @@
 
       <h2>util.js &ndash; docs</h2>
       <ul class="util-docs">
-        <li><code>Util.version</code> returns the version of the library.
+        <li><code>Util.version</code> returns the version of the library
           <ul>
             <li><code>Util.version // <span data-util-func="Util.version"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.author</code> returns the author of the library.
+        <li><code>Util.author</code> returns the author of the library
           <ul>
             <li><code>Util.author // <span data-util-func="Util.author"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.rot13(str)</code> encodes/decodes <code>str</code> based on the rot13 cipher.
+        <li><code>Util.rot13(str)</code> encodes/decodes <code>str</code> based on the rot13 cipher
           <ul>
             <li><code>Util.rot13("Hello world") // <span data-util-func="Util.rot13('Hello world')"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.squish(str)</code> removes all whitespace from <code>str</code>.
+        <li><code>Util.squish(str)</code> removes all whitespace from <code>str</code>
           <ul>
             <li><code>Util.squish("   Hell  o   worl   d    ") // <span data-util-func="Util.squish('   Hell  o   worl   d    ')"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.engrishify(str)</code> trims and truncates all whitespace from <code>str</code>.
+        <li><code>Util.engrishify(str)</code> trims and truncates all whitespace from <code>str</code>
           <ul>
             <li><code>Util.engrishify("   Hello     world    ") // <span data-util-func="Util.engrishify('   Hello     world    ')"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.randHexColor(hash)</code> returns a random hexadecimal color, with an optional <code>hash</code> appended to it.
+        <li><code>Util.randHexColor()</code> returns a random hexadecimal color, with an optional hex appended to it
           <ul>
             <li><code>Util.randHexColor() // <span data-util-func="Util.randHexColor()"></span></code></li>
             <li><code>Util.randHexColor("#") // <span data-util-func="Util.randHexColor('#')"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.randInt(min, max)</code> returns an integer between <code>min</code> and <code>max</code>.
+        <li><code>Util.randInt(min, max)</code> returns an integer between <code>min</code> and <code>max</code>
           <ul>
             <li><code>Util.randInt(-100, 100) // <span data-util-func="Util.randInt(-100, 100)"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.fact(n)</code> returns the factorial of <code>n</code> (-1 if <code>n</code> is &lt; 0).
+        <li><code>Util.fact(n)</code> returns the factorial of <code>n</code> (-1 if <code>n</code> is &lt; 0)
           <ul>
             <li><code>Util.fact(7) // <span data-util-func="Util.fact(7)"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.escRegEx(regex)</code> escapes the meta (special) characters from the regular expression <code>regex</code>.
+        <li><code>Util.escRegEx(regex)</code> escapes the meta (special) characters from the regular expression <code>regex</code>
           <ul>
             <li><code>Util.escRegEx("[^$.*/\\]") // <span data-util-func="Util.escRegEx('[^$.*/\\]')"></span></code></li>
           </ul>
         </li>
 
-        <li><code>Util.repAll(str, find, rep)</code> finds and replaces all instances of <code>find</code> in <code>str</code> with <code>rep</code>.
+        <li><code>Util.repAll(str, find, rep)</code> finds and replaces all instances of <code>find</code> in <code>str</code> with <code>rep</code>
           <ul>
             <li><code>Util.repAll("Will Smith will smith while smithing his will", "will", "code") // <span data-util-func="Util.repAll('Will Smith will smith while smithing his will', 'will', 'code')"></span></code></li>
-          </ul>
-        </li>
-
-        <li><code>Util.maskify(str, mask, offset)</code> replaces all but the last 4 characters of a string with "#". Optional parameters of <code>mask</code> for changing the masking character and <code>offset</code> for changing the offset value.
-          <ul>
-            <li><code>Util.maskify("util.js - a js utility library") // <span data-util-func="Util.maskify('util.js - a js utility library')"></span></code></li>
-            <li><code>Util.maskify("util.js - a js utility library", "$", 7) // <span data-util-func="Util.maskify('util.js - a js utility library', '$', 7)"></span></code></li>
           </ul>
         </li>
       </ul>
