@@ -1,5 +1,4 @@
 # Util.js
-=========
 
 A JavaScript library keyboarded by [@pinjasaur](http://twitter.com/pinjasaur).
 
