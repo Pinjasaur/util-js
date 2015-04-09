@@ -81,6 +81,15 @@
     */
     repAll: function(str, find, rep) {
       return str.replace(new RegExp(Util.escRegEx(find), "g"), rep);
+    },
+
+    /**
+    * "Mask" a string by replacing all but the last 4 (changeable via optional param) characters with a "#".
+    */
+    maskify: function(str, val) {
+      var offset = val ? val : 4;
+      if (str.length <= offset) return str;
+      return Array(str.length-offset+1).join("#") + str.substring(str.length-offset, str.length);
     }
 
     //TODO: Add an inverter function
