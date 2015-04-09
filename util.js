@@ -84,7 +84,7 @@
     },
 
     /**
-    * "Mask" a string by replacing all but the last 4 (changeable via optional param) characters with a "#".
+    * "Mask" a string by replacing all but the last 4 (changeable via optional param) characters with a "#" (changeable via optional param).
     */
     maskify: function(str, mask, offset) {
       var maskChar  = mask ? mask : "#";
@@ -94,7 +94,6 @@
     }
 
     //TODO: Add an inverter function
-    //TODO: "Maskify" function
   };
 
   if (global.Util) {
