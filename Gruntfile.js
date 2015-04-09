@@ -6,8 +6,7 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> - another js utility library\n* More info at pinjasaur.github.io/util-js/\n*/\n',
-        mangle: false
+        banner: '/*! <%= pkg.name %> - another js utility library\n* More info at pinjasaur.github.io/util-js/\n*/\n'
       },
       build: {
         src: 'util.js',

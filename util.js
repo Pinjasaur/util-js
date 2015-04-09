@@ -84,6 +84,7 @@
     }
 
     //TODO: Add an inverter function
+    //TODO: "Maskify" function
   };
 
   if (global.Util) {
